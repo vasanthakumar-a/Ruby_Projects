@@ -6,7 +6,7 @@ def display_menu
   puts "1 : Add Product \n2 : View Product \n3 : Transaction \nq : Quit"
 end
 
-def billing_error
+def display_billing_error
   puts "Billing error Insufficient balance in cash box\nEnter 1 to add amount to cashbox"
   get_cashbox_amount() if gets.to_i == 1
 end
@@ -27,9 +27,19 @@ def display_user_details
   }
 end
 
+def display_user_denomination
+  puts "User Denomination : ",denomination_given_to_user
+  puts
+end
+
 def display_balance_in_cashbox
   puts "Balance Available in Cash Box : "
   print $cash_box
   puts
   puts
+end
+
+def display_start_transaction
+  puts "Welcome User #{user_iteration} ........."
+  puts "Enter the Product Amount : "
 end
