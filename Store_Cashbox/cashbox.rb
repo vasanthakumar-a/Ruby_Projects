@@ -25,7 +25,7 @@ def cashbox_blance_amount_check(balance_to_give)
   return balance_amount_in_cashbox
 end
 
-def add_amount_in_cashbox
+def add_amount_in_cashbox(user_given_amounts)
   user_given_amounts.each {
     | each_amount |
       $cash_box[each_amount] += 1

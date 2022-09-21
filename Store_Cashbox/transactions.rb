@@ -1,5 +1,5 @@
 def transaction(user_iteration)
-  display_start_transaction()
+  display_start_transaction(user_iteration)
   product_amount = gets.to_i
 
   begin
@@ -26,22 +26,20 @@ def transaction(user_iteration)
 
   denomination_given_to_user = denominate_balance(balance_to_give)
 
-  if denomination_given_to_user.empty?
+  if  balance_to_give.nonzero? and denomination_given_to_user.empty?
     display_billing_error()
     return
   else
-    add_amount_in_cashbox()
-    adding_user_details()
-  end
-  display_user_denomination()
-end
+    add_amount_in_cashbox(user_given_amounts)
 
-def adding_user_details
-  $users["user#{user_iteration}"] = {
-    "product_amount" => product_amount,
-    "given_amount" => given_amount,
-    "balance" => balance_to_give,
-    "user_given_amounts" => user_given_amounts,
-    "denomination_given_to_user" => denomination_given_to_user
-  }
+    $users["user#{user_iteration}"] = {
+      "product_amount" => product_amount,
+      "given_amount" => given_amount,
+      "balance" => balance_to_give,
+      "user_given_amounts" => user_given_amounts,
+      "denomination_given_to_user" => denomination_given_to_user
+    }
+
+  end
+  display_user_denomination(denomination_given_to_user)
 end

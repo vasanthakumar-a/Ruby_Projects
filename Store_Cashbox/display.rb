@@ -27,7 +27,7 @@ def display_user_details
   }
 end
 
-def display_user_denomination
+def display_user_denomination(denomination_given_to_user)
   puts "User Denomination : ",denomination_given_to_user
   puts
 end
@@ -39,7 +39,7 @@ def display_balance_in_cashbox
   puts
 end
 
-def display_start_transaction
+def display_start_transaction(user_iteration)
   puts "Welcome User #{user_iteration} ........."
   puts "Enter the Product Amount : "
 end
