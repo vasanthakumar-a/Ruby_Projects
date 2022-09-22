@@ -28,10 +28,10 @@ tree = {
   }
 }
 
-def transpose(hash)
-  hash.each do |key, value|
+def transpose(value)
+  value['left'], value['right'] = value['right'], value['left']
+  value.each do |key,value|
     if value.is_a?(Hash) and value['left'] and value['right']
-      value['left'], value['right'] = value['right'], value['left']
       transpose(value)
     end
   end
@@ -42,7 +42,5 @@ puts
 puts
 
 transpose(tree)
-
-tree['left'], tree['right'] = tree['right'], tree['left']
 
 print tree
