@@ -8,3 +8,5 @@
     2. [Binary tree](https://github.com/vasanthakumar-a/Ruby_Projects/blob/master/Invert_tree/binary_tree_solution.rb) - Binary Tree Problem of Invert tree
 3. [Brackets Checking](https://github.com/vasanthakumar-a/Ruby_Projects/tree/master/Brackets_matching) - Validate the Brackets
 4. [Permutation](https://github.com/vasanthakumar-a/Ruby_Projects/tree/master/Permutation) - Permutation Problem
+    1. [with method](https://github.com/vasanthakumar-a/Ruby_Projects/blob/master/Permutation/permutation_with_method.rb) - Permutation with method
+    2. [without method](https://github.com/vasanthakumar-a/Ruby_Projects/blob/master/Permutation/permutation_without_method.rb) - Permutation without method
