@@ -8,8 +8,12 @@ def validate_bracket? bracket_array
       store_brackets<<bracket
     end
 
+    # print "Store Brackets : ",store_brackets,"\n"
+
     if bracket_hash.has_value?(bracket)
-      store_brackets.delete(bracket_hash.key(bracket))
+      if bracket_hash.key(bracket) == store_brackets[-1]
+        store_brackets.delete(bracket_hash.key(bracket))
+      end
     end
   end
 
