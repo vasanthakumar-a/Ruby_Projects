@@ -26,8 +26,11 @@ def validate_bracket? bracket_array
 end
 
 
-validate_bracket?("(){}[])")       # True
-validate_bracket?("([{}])")        # True
-validate_bracket?("(}")            # False
-validate_bracket?("[(])")          # False
-validate_bracket?("[({})](]")      # False
+validate_bracket?("(){}[])")                   # True
+validate_bracket?("([{}])")                    # True
+validate_bracket?("(}")                        # False
+validate_bracket?("[(])")                      # False
+validate_bracket?("[({})](]")                  # False
+validate_bracket?("")                          # True
+validate_bracket?("[({})](]")                  # False
+validate_bracket?("(({{[[]]}}[])[{]})")        # False
