@@ -13,8 +13,6 @@ def validate_bracket? bracket_array
     end
   end
 
-  print "Final : ",store_brackets,"\n"
-
   if store_brackets.empty?
     puts true
   else
